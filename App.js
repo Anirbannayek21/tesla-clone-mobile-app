@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import CarList from './component/carlist';
+import Header from './component/header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Header />
+      <CarList />
+
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +22,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  carContainer: {
+    width: "100%",
+    height: "100%"
+  },
+  header: {
+    marginTop: "30%",
+    width: "100%",
+    alignItems: "center"
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: "bold"
+  },
+  subtitle: {
+    fontSize: 17,
+    color: "#5c5e62"
+  },
+  img: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    position: "absolute"
+  }
 });
